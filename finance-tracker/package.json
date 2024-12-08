@@ -1,0 +1,32 @@
+{
+  "name": "finance-tracker",
+  "version": "1.0.0",
+  "description": "个人财务管理应用",
+  "private": true,
+  "scripts": {
+    "install-all": "cd frontend && npm install && cd ../backend && npm install",
+    "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\"",
+    "start:frontend": "cd frontend && npm start",
+    "start:backend": "cd backend && npm start",
+    "build": "cd frontend && npm run build && cd ../backend && npm run build",
+    "test": "cd frontend && npm test && cd ../backend && npm test",
+    "lint": "cd frontend && npm run lint && cd ../backend && npm run lint",
+    "clean": "rimraf frontend/build backend/dist node_modules"
+  },
+  "keywords": [
+    "finance",
+    "budget",
+    "savings",
+    "tracker"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.0.1",
+    "rimraf": "^5.0.1"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
+}
